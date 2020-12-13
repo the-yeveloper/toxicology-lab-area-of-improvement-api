@@ -23,7 +23,7 @@ describe('Testing coins', () => {
     it('it returns the correct schema for the coins property', async () => {
       const res = await request(app.getServer()).get(`${coinsRoute.path}?total=22.20`);
       expect(res.status).toBe(200);
-      expect(res.body.coins.length).toEqual(2);
+      expect(Object.keys(res.body.coins).length).toEqual(2);
       expect(res.body.coins.foos).toBeInstanceOf(Object);
       expect(Object.keys(res.body.coins.bars)).toEqual(['1', '2']);
       expect(res.body.coins.bars).toBeInstanceOf(Object);

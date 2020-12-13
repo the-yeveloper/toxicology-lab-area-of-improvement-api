@@ -22,7 +22,6 @@ describe('Testing People Controller', () => {
         });
       expect(res.status).toEqual(200);
       expect(res.body).toBeInstanceOf(Object);
-      expect(res.body.greeting).toBeInstanceOf(String);
       expect(res.body.greeting).toEqual('Hi Marvin!');
     });
 
@@ -38,13 +37,13 @@ describe('Testing People Controller', () => {
       expect(res.body).toBeInstanceOf(Object);
       expect(res.body.patients).toBeInstanceOf(Array);
 
-      expect(res.body.patients[0].paitent).toEqual('Bob');
+      expect(res.body.patients[0].patient).toEqual('Bob');
       expect(res.body.patients[0].treatment).toEqual('flu shot');
 
-      expect(res.body.patients[1].paitent).toEqual('Mohammed');
+      expect(res.body.patients[1].patient).toEqual('Mohammed');
       expect(res.body.patients[1].treatment).toEqual('flu shot');
 
-      expect(res.body.patients[2].paitent).toEqual('Claire');
+      expect(res.body.patients[2].patient).toEqual('Claire');
       expect(res.body.patients[2].treatment).toEqual('flu shot');
     });
 
@@ -58,13 +57,13 @@ describe('Testing People Controller', () => {
         });
       expect(res.status).toEqual(200);
       expect(res.body).toBeInstanceOf(Object);
-      expect(res.body.paitents).toBeInstanceOf(Array);
+      expect(res.body.patients).toBeInstanceOf(Array);
 
-      expect(res.body.paitents[0].paitent).toEqual('Pickles');
-      expect(res.body.paitents[0].treatment).toEqual('shots and a chew toy');
+      expect(res.body.patients[0].patient).toEqual('Pickles');
+      expect(res.body.patients[0].treatment).toEqual('shots and a chew toy');
 
-      expect(res.body.paitents[1].paitent).toEqual('Mr Bojangles');
-      expect(res.body.paitents[1].treatment).toEqual('shots and a chew toy');
+      expect(res.body.patients[1].patient).toEqual('Mr Bojangles');
+      expect(res.body.patients[1].treatment).toEqual('shots and a chew toy');
     });
   });
 });
